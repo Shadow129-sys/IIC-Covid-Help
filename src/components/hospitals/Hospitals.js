@@ -139,6 +139,42 @@ function Hospitals() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [show5]);
 
+  useEffect(()=>{
+    dispatch({
+        type: "AddOxygen",
+        data: "",
+    });
+  }, [show1]);
+
+  useEffect(()=>{
+    dispatch({
+        type: "AddNormalBeds",
+        data: "",
+    });
+    dispatch({
+        type: "AddICUBeds",
+        data: "",
+    });
+  }, [show2]);
+
+  useEffect(()=>{
+    dispatch({
+        type: "AddDoctors",
+        data: "",
+    });
+  }, [show3]);
+
+  useEffect(()=>{
+    dispatch({
+        type: "AddVaccineName",
+        data: "",
+    });
+    dispatch({
+        type: "AddQuantity",
+        data: "",
+    });
+  }, [show4]);
+
   function dropdown() {
     return (
       <div className="resources">
@@ -153,7 +189,7 @@ function Hospitals() {
           <li>
             <label className="options">
               <div>
-                <input onClick={() => setShow1(!show1)} type="radio"></input>
+                <input onClick={() => setShow1(!show1)} type="checkbox" checked={show1}></input>
               </div>
               <div style={{ cursor: "pointer" }} className="oxygen radio">
                 Oxygen
@@ -187,7 +223,7 @@ function Hospitals() {
           <li>
             <label className="options">
               <div>
-                <input type="radio" onClick={() => setShow2(!show2)}></input>
+                <input type="checkbox" onClick={() => setShow2(!show2)} checked={show2}></input>
               </div>
               <div style={{ cursor: "pointer" }} className="bed radio">
                 Hospital Bed
@@ -246,7 +282,7 @@ function Hospitals() {
           <li>
             <label className="options">
               <div>
-                <input onClick={() => setShow3(!show3)} type="radio"></input>
+                <input onClick={() => setShow3(!show3)} type="checkbox" checked={show3}></input>
               </div>
               <div style={{ cursor: "pointer" }} className="doctor radio">
                 Doctor
@@ -280,7 +316,7 @@ function Hospitals() {
           <li>
             <label className="options">
               <div>
-                <input type="radio" onClick={() => setShow4(!show4)}></input>
+                <input type="checkbox" onClick={() => setShow4(!show4)} checked={show4}></input>
               </div>
               <div style={{ cursor: "pointer" }} className="covid19 radio">
                 Covid-19 Vaccine
