@@ -167,8 +167,12 @@ function Hospitals() {
                   height: "3em",
                   outline: "none",
                   paddingLeft: "1em",
+                  position: "relative",
+                  top: "-0.5em",
+                  marginBottom: "0.5em"
                 }}
                 type="number"
+                min="0"
                 placeholder="Enter the amount of oxygen"
                 onChange={(e) => {
                   dispatch({
@@ -197,8 +201,12 @@ function Hospitals() {
                     height: "3em",
                     outline: "none",
                     paddingLeft: "1em",
+                    position: "relative",
+                    top: "-0.5em",
+                    marginBottom: "0.5em"
                   }}
                   type="number"
+                  min="0"
                   placeholder="Enter number of normal beds"
                   onChange={(e) => {
                     dispatch({
@@ -215,6 +223,9 @@ function Hospitals() {
                     outline: "none",
                     paddingLeft: "1em",
                     marginLeft: "1em",
+                    position: "relative",
+                    top: "-0.5em",
+                    marginBottom: "0.5em"
                   }}
                   onChange={(e) => {
                     dispatch({
@@ -223,6 +234,7 @@ function Hospitals() {
                     });
                   }}
                   type="number"
+                  min="0"
                   placeholder="Enter number of ICU beds"
                 ></input>
               </div>
@@ -245,6 +257,9 @@ function Hospitals() {
                   height: "3em",
                   outline: "none",
                   paddingLeft: "1em",
+                  position: "relative",
+                  top: "-0.5em",
+                  marginBottom: "0.5em"
                 }}
                 onChange={(e) => {
                   dispatch({
@@ -253,6 +268,7 @@ function Hospitals() {
                   });
                 }}
                 type="number"
+                min="0"
                 placeholder="Enter number of doctors"
               ></input>
             ) : null}
@@ -275,6 +291,9 @@ function Hospitals() {
                     height: "3em",
                     outline: "none",
                     paddingLeft: "1em",
+                    position: "relative",
+                    top: "-0.5em",
+                    marginBottom: "0.5em"
                   }}
                   type="text"
                   placeholder="Enter the name of the vaccine"
@@ -297,8 +316,12 @@ function Hospitals() {
                     outline: "none",
                     paddingLeft: "1em",
                     marginLeft: "1em",
+                    position: "relative",
+                    top: "-0.5em",
+                    marginBottom: "0.5em"
                   }}
                   type="number"
+                  min="0"
                   placeholder="Enter the quantity of vaccine"
                   onChange={(e) => {
                     dispatch({
@@ -424,10 +447,14 @@ function Hospitals() {
                   onChange={setValues}
                 ></input>
 
-                <div style={{ display: "flex", marginRight: "auto" }}>
+                <div style={{ display: "flex", justifyContent: "flex-start"}}>
                   <input
                     onClick={() => {
                       setShow5(!show5);
+                    }}
+                    style={{
+                        position : "relative",
+                        top : "0.4em"
                     }}
                     type="checkbox"
                   ></input>
