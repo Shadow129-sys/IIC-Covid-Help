@@ -174,6 +174,7 @@ function Hospitals() {
                 type="number"
                 min="0"
                 placeholder="Enter the amount of oxygen"
+                value={Oxygen}
                 onChange={(e) => {
                   dispatch({
                     type: "AddOxygen",
@@ -208,6 +209,7 @@ function Hospitals() {
                   type="number"
                   min="0"
                   placeholder="Enter number of normal beds"
+                  value={Normal}
                   onChange={(e) => {
                     dispatch({
                       type: "AddNormalBeds",
@@ -236,6 +238,7 @@ function Hospitals() {
                   type="number"
                   min="0"
                   placeholder="Enter number of ICU beds"
+                  value={Icu}
                 ></input>
               </div>
             ) : null}
@@ -270,6 +273,7 @@ function Hospitals() {
                 type="number"
                 min="0"
                 placeholder="Enter number of doctors"
+                value={Doctor}
               ></input>
             ) : null}
           </li>
@@ -297,6 +301,7 @@ function Hospitals() {
                   }}
                   type="text"
                   placeholder="Enter the name of the vaccine"
+                  value={VaccineName}
                   onChange={(e) => {
                     dispatch({
                       type: "AddVaccineAvailable",
@@ -323,6 +328,7 @@ function Hospitals() {
                   type="number"
                   min="0"
                   placeholder="Enter the quantity of vaccine"
+                  value={Quantity}
                   onChange={(e) => {
                     dispatch({
                       type: "AddVaccineAvailable",
